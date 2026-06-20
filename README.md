@@ -63,6 +63,13 @@ Untuk dokumentasi detail mengenai cara pembuatan dan aturan penulisan kode, sila
 - [📖 Panduan Pengelolaan Modul Domain (src/domain)](src/domain/README.md)
 - [🎨 Panduan Pengelolaan Komponen (src/shared/components)](src/shared/components/README.md)
 
+## Panduan Arsitektur
+
+Lihat [CODE.md](./CODE.md) untuk aturan lengkap mengenai:
+- Konvensi penamaan fungsi, file, dan folder
+- Struktur per file (Types, States, Services, Controllers, Components)
+- Aturan penulisan komponen Vue
+
 ## 🤝 Kontribusi
 
 1. Fork repositori ini.
