@@ -26,3 +26,5 @@ logs
 /generated/prisma
 
 .qodo
+.vscode
+.claude
