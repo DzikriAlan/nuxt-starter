@@ -2,21 +2,21 @@
 
 ## Function Naming Rules
 
-| Prefix      | Service | Controller | onMessage | emit | UI vue | Utilisasi (inner function) |
-| ----------- | :-----: | :--------: | :-------: | :--: | :----: | :------------------------: |
-| `get`       |   ✅    |     ❌     |     ❌    |  ❌  |   ❌   |             ✅              |
-| `post`      |   ✅    |     ❌     |     ❌    |  ❌  |   ❌   |             ✅              |
-| `update`    |   ✅    |     ❌     |     ❌    |  ❌  |   ❌   |             ✅              |
-| `patch`     |   ✅    |     ❌     |     ❌    |  ❌  |   ❌   |             ✅              |
-| `delete`    |   ✅    |     ❌     |     ❌    |  ❌  |   ❌   |             ✅              |
-| `fetch`     |   ❌    |     ✅     |     ❌    |  ❌  |   ❌   |             ❌              |
-| `store`     |   ❌    |     ✅     |     ❌    |  ❌  |   ❌   |             ❌              |
-| `change`    |   ❌    |     ✅     |     ❌    |  ❌  |   ❌   |             ❌              |
-| `remove`    |   ❌    |     ✅     |     ❌    |  ❌  |   ❌   |             ❌              |
-| `load`      |   ❌    |     ❌     |     ✅    |  ✅  |   ✅   |             ❌              |
-| `save`      |   ❌    |     ❌     |     ✅    |  ✅  |   ✅   |             ❌              |
-| `modify`    |   ❌    |     ❌     |     ✅    |  ✅  |   ✅   |             ❌              |
-| `destroy`   |   ❌    |     ❌     |     ✅    |  ✅  |   ✅   |             ❌              |
+| Prefix   | Service | Controller | onMessage | emit | UI vue | Utilisasi (inner function) |
+| -------- | :-----: | :--------: | :-------: | :--: | :----: | :------------------------: |
+| `get`    |   ✅    |     ❌     |    ❌     |  ❌  |   ❌   |             ✅             |
+| `post`   |   ✅    |     ❌     |    ❌     |  ❌  |   ❌   |             ✅             |
+| `update` |   ✅    |     ❌     |    ❌     |  ❌  |   ❌   |             ✅             |
+| `patch`  |   ✅    |     ❌     |    ❌     |  ❌  |   ❌   |             ✅             |
+| `delete` |   ✅    |     ❌     |    ❌     |  ❌  |   ❌   |             ✅             |
+| `fetch`  |   ❌    |     ✅     |    ❌     |  ❌  |   ❌   |             ❌             |
+| `store`  |   ❌    |     ✅     |    ❌     |  ❌  |   ❌   |             ❌             |
+| `modify` |   ❌    |     ✅     |    ❌     |  ❌  |   ❌   |             ❌             |
+| `remove` |   ❌    |     ✅     |    ❌     |  ❌  |   ❌   |             ❌             |
+| `load`   |   ❌    |     ❌     |    ✅     |  ✅  |   ✅   |             ❌             |
+| `submit` |   ❌    |     ❌     |    ✅     |  ✅  |   ✅   |             ❌             |
+| `edit`   |   ❌    |     ❌     |    ✅     |  ✅  |   ✅   |             ❌             |
+| `clear`  |   ❌    |     ❌     |    ✅     |  ✅  |   ✅   |             ❌             |
 
 ## Struktur Output
 
@@ -40,17 +40,17 @@ Dari URL endpoint, buang segmen berikut:
 
 Sisa path yang bermakna dibagi menjadi tiga konsep:
 
-| Konsep | Aturan | Digunakan untuk |
-|--------|--------|-----------------|
-| **folderName** | Segmen **pertama** sisa path, `kebab-case` | Nama folder domain |
-| **fileName** | `folderName` dikonversi ke `camelCase` | Prefix nama file `.ts` |
+| Konsep           | Aturan                                       | Digunakan untuk                                                 |
+| ---------------- | -------------------------------------------- | --------------------------------------------------------------- |
+| **folderName**   | Segmen **pertama** sisa path, `kebab-case`   | Nama folder domain                                              |
+| **fileName**     | `folderName` dikonversi ke `camelCase`       | Prefix nama file `.ts`                                          |
 | **resourceName** | gabungan semua segmen, digabung `PascalCase` | Nama TypeScript: types, controllers, handlers, services, states |
 
 **Contoh:**
 
-| URL | folderName | fileName | filename |
-|-----|-----------|----------|--------------|
-| `/api/v1/users/profile` | `users` | `users` | `UsersProfile` |
+| URL                                           | folderName  | fileName   | filename               |
+| --------------------------------------------- | ----------- | ---------- | ---------------------- |
+| `/api/v1/users/profile`                       | `users`     | `users`    | `UsersProfile`         |
 | `/api/v1/ai-search/register/file/{type}/{id}` | `ai-search` | `aiSearch` | `aiSearchRegisterFile` |
 
 > Segmen dinamis (`{param}`) selalu diabaikan.
@@ -84,10 +84,10 @@ export interface {resourceName} {
 
 **Kapan `Data{resourceName}` & field `data` dibuat:**
 
-| Kondisi response | Buat `Data{resourceName}`? | Tambah field `data`? |
-|------------------|---------------------------|----------------------|
-| Mengembalikan objek/array | ✅ Ya | ✅ Ya |
-| Void / empty (misal DELETE) | ❌ Tidak | ❌ Tidak |
+| Kondisi response            | Buat `Data{resourceName}`? | Tambah field `data`? |
+| --------------------------- | -------------------------- | -------------------- |
+| Mengembalikan objek/array   | ✅ Ya                      | ✅ Ya                |
+| Void / empty (misal DELETE) | ❌ Tidak                   | ❌ Tidak             |
 
 Default values: `string → ""`, `number → 0`, `boolean → false`, `Array → []`, `Object → {}`
 
@@ -129,7 +129,7 @@ const api = useApi()
 const baseUrl = import.meta.env.VITE_API_BASE_URL
 
 // ✅ BENAR
-export const {get|post|put|delete}{resourceName} = async (payload) => {
+export const {get|post|update|patch|delete}{resourceName} = async (payload) => {
   try {
     const { data } = await api.{method}(
       `${baseUrl}/path/to/endpoint${formattingQueryString(payload)}`, // formattingQueryString hanya untuk GET
@@ -142,8 +142,18 @@ export const {get|post|put|delete}{resourceName} = async (payload) => {
 }
 
 // ❌ DILARANG — jangan tulis return type
-export const {get|post|put|delete}{resourceName} = async (payload): Promise<Data{resourceName} | null> => { ... }
+export const {get|post|update|patch|delete}{resourceName} = async (payload): Promise<Data{resourceName} | null> => { ... }
 ```
+
+**Prefix method service:**
+
+| HTTP   | Prefix   | Contoh                 |
+| ------ | -------- | ---------------------- |
+| GET    | `get`    | `getUsersProfile()`    |
+| POST   | `post`   | `postRegisterFile()`   |
+| PUT    | `update` | `updateUsersProfile()` |
+| PATCH  | `patch`  | `patchUsersProfile()`  |
+| DELETE | `delete` | `deleteUsersProfile()` |
 
 **Aturan**: Tidak ada state logic. Hanya pure API call. **Dilarang menulis return type annotation** — tidak boleh ada `: Promise<...>` pada fungsi service.
 
@@ -161,7 +171,7 @@ export const use{filename}Controllers = defineStore('use{filename}Controllers, (
   const { {camelResourceName} } = use{filename}States()
   const { Payload{resourceName} } = use{filename}Types()
 
-  const {fetch|store|update|remove}{resourceName} = async (payload: Payload{resourceName}, isStore = true) => {
+  const {fetch|store|modify|remove}{resourceName} = async (payload: Payload{resourceName}, isStore = true) => {
     if (isStore) {camelResourceName}.status = 'loading'
 
     try {
@@ -177,18 +187,20 @@ export const use{filename}Controllers = defineStore('use{filename}Controllers, (
     }
   }
 
-  return { {fetch|store|update|remove}{resourceName} }
+  return { {fetch|store|modify|remove}{resourceName} }
 })
 ```
 **Aturan**: Hanya function yang memanggil function dari services, yang tidak memanggil function services, dipanggilnya pada component terkait secara langsung saja
 **Prefix method store:**
 
-| HTTP | Prefix | Contoh |
-|------|--------|--------|
-| GET | `fetch` | `fetchUsersProfile()` |
-| POST | `store` | `storeRegisterFile()` |
-| PUT/PATCH | `update` | `updateUsersProfile()` |
-| DELETE | `remove` | `removeUsersProfile()` |
+| HTTP      | Prefix   | Contoh                 |
+| --------- | -------- | ---------------------- |
+| GET       | `fetch`  | `fetchUsersProfile()`  |
+| POST      | `store`  | `storeRegisterFile()`  |
+| PUT/PATCH | `modify` | `modifyUsersProfile()` |
+| DELETE    | `remove` | `removeUsersProfile()` |
+
+> `update` dan `patch` di layer service keduanya dibungkus oleh `modify` di layer controller.
 
 ---
 
@@ -203,22 +215,76 @@ Urutan penulisan wajib mengikuti struktur berikut:
 
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, reactive } from 'vue'
 
-import type { User } from './types'
-import { tableColumns } from './static/UserTable'
-import { useUserState } from '/@src/states/user'
-import { useUserHandler } from './handlers/useUserHandler'
+import type { DataUsersProfile } from '../types/usersTypes'
+import { useUsersStates } from '../states/usersStates'
+import { useUsersControllers } from '../controllers/usersControllers'
 
 const props = defineProps()
 
 const emit = defineEmits()
 
-const loading = ref(false)
+const { usersProfile, usersCategories, assets } = useUsersStates()
+const { fetchUsersProfile, removeUsersProfile } = useUsersControllers()
 
-const users = computed(() => [])
+const filters = reactive({
+  filter: {
+    categoryId: '',
+    year: '',
+  },
+  pagination: {
+    currentPage: 1,
+    perPage: 10,
+    totalItem: 0,
+    totalPage: 0,
+  },
+  search: '',
+  // bisa ada field lain jika dibutuhkan
+})
 
-const handleSubmit = () => {}
+const data = computed(() => {
+  // utilisasi wajib ditulis di dalam parent function
+  const getMappedItem = (item: DataUsersProfile, categoryName: string) => ({
+    id: item.id,
+    title: item.title,
+    category: categoryName,
+  })
+
+  const activeCategory = usersCategories.data.find((category) => category.isActive)
+  const categories = activeCategory?.categories ?? []
+  const tabs = ['Semua', ...categories.map((category) => category.name)]
+  const isCategoryTabActive = !!activeCategory && filters.activeSubCategory === activeCategory.name
+  const filteredList = isCategoryTabActive
+    ? usersProfile.data.filter((raw) => !raw.sub_category_name)
+    : usersProfile.data
+  const mappedList = filteredList.map((raw) => getMappedItem(raw, raw.category_name))
+
+  return {
+    data: mappedList,
+    isLoading: usersProfile.status === 'loading',
+    isError: usersProfile.status === 'error',
+    isEmpty: usersProfile.status === 'success' && !mappedList.length,
+    emptyTitle: 'Data Tidak Ditemukan',
+    emptySubtitle: 'Belum ada data yang dapat ditampilkan untuk kategori ini. Cek kategori lain atau kembali lagi nanti.',
+    emptyImage: assets?.noData3Svg,
+    pagination: filters.pagination,
+    // bisa ada field lain jika dibutuhkan
+  }
+})
+
+const loadUsersProfile = (page: number) => {
+  filters.pagination.currentPage = page
+  fetchUsersProfile(filters.filter)
+}
+const submitUsersProfile = () => {}
+const editUsersProfile = () => {}
+const clearUsersProfile = () => {
+  // utilisasi wajib ditulis di dalam parent function
+  const getSelectedIds = () => data.value.data.map((item) => item.id)
+
+  removeUsersProfile({ ids: getSelectedIds() })
+}
 
 watch(() => {}, () => {})
 
@@ -233,6 +299,37 @@ onUnmounted(() => {})
 @import "...";
 </style>
 ```
+
+**Aturan `filters` & `data`:**
+
+- Semua kondisi tampilan (filter, pagination, search, tab aktif, toggle UI) digabung ke dalam **satu** state bernama `filters`.
+- Semua derived value dihitung di dalam **satu** computed bernama `data`, tidak tersebar di luar.
+- Function utilisasi (`get*`) ditulis di dalam `data`, bukan di scope module.
+
+**Field wajib pada return `data`:**
+
+| Field           | Tipe      | Keterangan                                      |
+| --------------- | --------- | ----------------------------------------------- |
+| `data`          | `Array`   | Hasil mapping list yang siap dirender           |
+| `isLoading`     | `boolean` | Status loading dari controller                  |
+| `isError`       | `boolean` | Status error dari controller                    |
+| `isEmpty`       | `boolean` | `true` jika sudah selesai load tapi data kosong |
+| `emptyTitle`    | `string`  | Judul saat state kosong                         |
+| `emptySubtitle` | `string`  | Deskripsi saat state kosong                     |
+| `emptyImage`    | `string`  | Ilustrasi saat state kosong                     |
+| `pagination`    | `Object`  | Pagination aktif dari `filters`                 |
+/** bisa ada field lain jika dibutuhkan */
+
+**Prefix method component, emit & onMessage:**
+
+| Aksi              | Prefix   | Contoh handler         | Contoh emit                    |
+| ----------------- | -------- | ---------------------- | ------------------------------ |
+| Baca / muat data  | `load`   | `loadUsersProfile()`   | `emit('load-users-profile')`   |
+| Kirim / buat data | `submit` | `submitUsersProfile()` | `emit('submit-users-profile')` |
+| Ubah data         | `edit`   | `editUsersProfile()`   | `emit('edit-users-profile')`   |
+| Hapus data        | `clear`  | `clearUsersProfile()`  | `emit('clear-users-profile')`  |
+
+> Prefix service (`get`, `post`, `update`, `patch`, `delete`) di dalam component **hanya** boleh dipakai untuk function utilisasi di dalam parent function, bukan untuk handler, emit, maupun onMessage.
 
 ---
 
@@ -302,18 +399,21 @@ Ketentuan:
 - Tidak boleh menggunakan penamaan function diluar dari convention yang sudah ditentukan
 - Harus melakukan utilisasi dengan membuat function baru di dalam parent function.
 - Function utilitas tidak boleh berada di luar parent function.
-- harus melakukan penamaan emit atupun onMessage dengan rumus (action + subject), berikut contohnya dan yang perlu diketahui adalah tidak selalu menggunakan prefix dari function naming rules
-    emit('create-user') 
-    emit('update-user')
-    emit('delete-user')
+- Function utilitas (inner function) hanya boleh memakai prefix `get`, `post`, `update`, `patch`, `delete`.
+- Harus melakukan penamaan emit ataupun onMessage dengan rumus `(emit prefix + subject)` dalam `kebab-case`:
+    emit('load-user')
+    emit('submit-user')
+    emit('edit-user')
+    emit('clear-user')
 
-    emit('open-modal')
-    emit('close-modal')
+    emit('load-modal')
+    emit('clear-modal')
 
-    onMessage('create-user')
-    onMessage('update-user')
-    onMessage('delete-user')
+    onMessage('load-user')
+    onMessage('submit-user')
+    onMessage('edit-user')
+    onMessage('clear-user')
 
-    onMessage('open-modal')
-    onMessage('close-modal')
+    onMessage('load-modal')
+    onMessage('clear-modal')
 ---
