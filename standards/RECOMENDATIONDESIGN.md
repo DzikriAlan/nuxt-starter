@@ -642,3 +642,106 @@ Ini adalah pasangan dari `design.md`. Jika `design.md` berisi *checklist judgeme
 - [x] Uji persepsi gradient tetap sesuai di dark mode
 - [x] Perkuat konsep desain dasar tanpa bergantung pada tekstur/gradient
 
+## 33. Anti "AI Slop" — Pilihan Visual Otentik
+- [x] Pilih palet warna khas brand, bukan gradient ungu-biru generik
+- [x] Gunakan font dengan kustomisasi/karakter, bukan default polos tanpa olahan
+- [x] Rancang ilustrasi yang relevan dengan cerita brand, bukan blob abstrak acak
+- [x] Bangun struktur hero section yang punya sudut pandang berbeda dari kompetitor
+- [x] Gunakan ikon/ilustrasi proper, batasi pemakaian emoji sebagai pengganti
+- [x] Tulis copy spesifik dan berbukti, hindari buzzword kosong
+- [x] Pakai glassmorphism hanya saat mendukung fungsi, bukan sekadar tren
+- [x] Sesuaikan susunan testimoni-fitur-pricing dengan kebutuhan brand sendiri
+- [x] Gunakan foto yang menunjukkan konteks nyata, bukan stok senyum klise
+- [x] Beri makna/fungsi pada pattern dekoratif, bukan sekadar pengisi ruang
+- [x] Batasi shadow pada elemen yang benar-benar butuh penekanan hierarki
+- [x] Rancang bentuk custom yang punya makna terhadap identitas brand
+- [x] Isi header besar dengan konten substantif, bukan hanya visual kosong
+- [x] Diferensiasikan visual checklist/fitur antar item, bukan seragam generik
+- [x] Bangun hierarki tipografi yang jelas, hindari "bold besar" tanpa struktur
+- [x] Kurasi setiap elemen desain secara manual, bukan asal comot template
+- [x] Gunakan gradient mesh hanya saat relevan dengan konsep visual
+- [x] Ambil sikap visual yang berani sesuai kepribadian brand
+
+## 34. Anti "AI Slop" — Struktur yang Disengaja
+- [x] Variasikan struktur tiap section agar tidak identik "3 kolom + ikon" semua
+- [x] Bangun ritme visual dengan variasi pola antar section
+- [x] Sesuaikan padding/margin dengan kebutuhan konten spesifik tiap area
+- [x] Pecahkan simetri sesekali untuk menghindari kesan monoton
+- [x] Variasikan konteks dan penempatan CTA antar section
+- [x] Sesuaikan alur "problem-solution-benefit" dengan nuansa cerita brand
+- [x] Ragamkan format section testimoni, tidak selalu 3 kartu identik
+- [x] Kustomisasi struktur footer sesuai kebutuhan informasi produk
+- [x] Sesuaikan visual accordion FAQ dengan identitas brand
+- [x] Sertakan sumber/konteks jelas untuk setiap statistik yang ditampilkan
+- [x] Rancang pricing table sesuai strategi bisnis, bukan template 3 kolom baku
+- [x] Kurasi logo klien yang benar-benar relevan ditampilkan
+- [x] Variasikan gaya transisi antar section, tidak selalu fade-in dari bawah
+- [x] Sesuaikan struktur konten dengan kebutuhan unik tiap halaman
+- [x] Isi ruang kosong dengan konten bermakna atau biarkan sebagai jeda sengaja
+- [x] Kembangkan struktur sendiri, gunakan kompetitor hanya sebagai referensi awal
+- [x] Rancang tiap section dengan tujuan jelas, bukan sekadar melengkapi checklist
+- [x] Validasi tiap keputusan layout dengan kebutuhan nyata, bukan kebiasaan umum
+
+## 35. Anti "AI Slop" — Copy yang Spesifik & Jujur
+- [x] Ganti headline generik dengan klaim konkret dan terukur
+- [x] Batasi pemakaian kata "seamless/empower/unlock" kecuali benar-benar relevan
+- [x] Tulis headline yang hanya cocok untuk produk ini, bukan produk manapun
+- [x] Tulis testimoni yang terdengar natural dan spesifik, bukan sempurna berlebihan
+- [x] Sertakan sumber/konteks untuk setiap klaim statistik
+- [x] Tulis CTA yang menjelaskan hasil konkret, bukan generik "Get Started"
+- [x] Jelaskan manfaat nyata di tiap deskripsi fitur, bukan hanya nama fitur
+- [x] Sesuaikan bahasa dengan nada natural audiens, bukan kaku formal berlebihan
+- [x] Edit ulang seluruh konten hasil draf dengan proofread manusia
+- [x] Ganti superlatif kosong dengan bukti/data pendukung
+- [x] Variasikan struktur kalimat antar paragraf agar tidak monoton
+- [x] Tulis micro-copy dengan suara khas brand, bukan template umum
+- [x] Ringkas deskripsi produk ke poin utama yang jelas
+- [x] Susun FAQ dari pertanyaan nyata pengguna, bukan template generik
+- [x] Kembangkan tagline yang unik dan sulit ditiru brand lain
+- [x] Sertakan bukti yang bisa diverifikasi untuk setiap klaim besar
+- [x] Jaga konsistensi nada bicara di seluruh halaman produk
+- [x] Hilangkan konten filler yang tidak menambah nilai informasi
+
+## 36. Review, Testing & Validasi Desain
+- [x] Jadwalkan review desain oleh minimal satu rekan sebelum final
+- [x] Lakukan usability testing dengan pengguna nyata sebelum rilis
+- [x] Kumpulkan feedback secara terstruktur (survei/skala), bukan hanya opini
+- [x] Uji desain di berbagai perangkat dan browser sebelum rilis
+- [x] Jalankan A/B testing untuk keputusan desain berdampak besar
+- [x] Gunakan 10 usability heuristics Nielsen sebagai acuan review
+- [x] Uji skenario error dan edge case, bukan hanya happy path
+- [x] Lakukan cold review dari orang yang belum tahu konteks proyek
+- [x] Definisikan metrik keberhasilan desain sebelum implementasi
+- [x] Jalankan audit aksesibilitas otomatis dan manual
+- [x] Lakukan design QA untuk cek kesesuaian implementasi vs desain asli
+- [x] Uji ulang desain setelah konten nyata dimasukkan
+- [x] Dokumentasikan dan tindak lanjuti setiap feedback dari review
+- [x] Validasi desain terhadap tujuan bisnis, bukan hanya estetika
+- [x] Simpan versi desain (versioning) untuk perbandingan/rollback
+- [x] Uji desain dalam kondisi nyata (data asli, koneksi lambat)
+- [x] Terapkan proses sign-off jelas sebelum rilis
+- [x] Terima kritik secara objektif dan tindak lanjuti tanpa defensif
+
+## 37. Etika & Tanggung Jawab dalam Desain
+- [x] Hindari dark pattern yang memaksa pengguna (subscription trap, dst)
+- [x] Minta consent pengguna secara jujur dan jelas
+- [x] Tampilkan opsi penting (unsubscribe, hapus akun) dengan mudah diakses
+- [x] Jelaskan penggunaan data pribadi secara transparan dalam UI
+- [x] Hindari mengeksploitasi bias psikologis pengguna secara tidak etis
+- [x] Tangani konten sensitif dengan hati-hati, bukan demi engagement semata
+- [x] Pertimbangkan dampak desain terhadap kelompok rentan
+- [x] Rancang notifikasi tanpa memicu urgensi/kecanduan palsu
+- [x] Rancang desain inklusif untuk beragam kemampuan pengguna
+- [x] Pastikan klaim visual/copy akurat dan tidak menyesatkan
+- [x] Sederhanakan alur pembatalan/cancel, jangan dipersulit sengaja
+- [x] Terapkan privasi by design sejak awal proses
+- [x] Pertimbangkan dampak lingkungan (ukuran data, energi) dalam desain digital
+- [x] Sesuaikan desain dengan konteks budaya lokal agar tidak menyinggung
+- [x] Komunikasikan transparansi algoritma personalisasi ke pengguna
+- [x] Hindari elemen urgensi palsu (fake countdown, fake stock)
+- [x] Bangun proses tim untuk mempertanyakan etika keputusan produk
+- [x] Evaluasi dampak jangka panjang desain ke pengguna, bukan hanya konversi jangka pendek
+
+---
+
+**Kesimpulan:** File ini adalah versi "sudah diputuskan" dari `design.md` — 666 pilihan desain konkret dan positif yang secara langsung menolak pola generik/AI slop (gradient ungu-biru default, copy buzzword kosong, layout template SaaS seragam). Pakai sebagai default keputusan, bukan sekadar pertanyaan evaluasi.
