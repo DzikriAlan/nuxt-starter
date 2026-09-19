@@ -162,3 +162,183 @@ Ini adalah pasangan dari `design.md`. Jika `design.md` berisi *checklist judgeme
 - [x] Hindari kontras rendah pada elemen bermakna penting demi estetika
 - [x] Perkuat kontras tombol teks terhadap warna latar tombol
 
+## 9. Komponen UI (Umum)
+- [x] Bangun komponen di design system sebelum dipakai berulang di halaman
+- [x] Definisikan state lengkap tiap komponen: default/hover/active/disabled/focus
+- [x] Ikuti pola interaksi platform yang sudah familiar pengguna
+- [x] Skalakan ukuran komponen dari sistem token yang sama
+- [x] Batasi varian komponen hanya untuk kebutuhan fungsional nyata
+- [x] Tulis dokumentasi singkat pemakaian tiap komponen
+- [x] Uji komponen dengan konten ekstrem (teks panjang, kosong, error)
+- [x] Standarkan radius komponen dari token global
+- [x] Standarkan level shadow/elevasi komponen dari token global
+- [x] Bangun komponen modular yang menerima props/variasi konten
+- [x] Buat komponen responsif otomatis terhadap lebar container
+- [x] Uji kombinasi komponen bertumpuk (dropdown dalam modal, dst)
+- [x] Tetapkan batas ukuran maksimum/minimum wajar per komponen
+- [x] Buat komponen custom hanya setelah komponen standar terbukti tidak cukup
+- [x] Uji tiap komponen dengan keyboard dan screen reader
+- [x] Beri transisi halus antar state komponen (150-250ms)
+- [x] Sesuaikan komponen dari UI kit populer dengan detail unik brand
+- [x] Dokumentasikan dependency antar komponen untuk maintenance
+
+## 10. Tombol & CTA
+- [x] Tetapkan satu CTA primer paling menonjol per layar
+- [x] Tulis label tombol yang actionable dan spesifik ("Mulai Uji Coba", bukan "Klik")
+- [x] Set ukuran tombol minimal tinggi 44px untuk kenyamanan sentuh
+- [x] Bedakan gaya visual tombol primer vs sekunder vs tersier
+- [x] Sertakan penjelasan singkat kenapa tombol disabled (tooltip/helper text)
+- [x] Batasi jumlah tombol per area agar tidak membingungkan
+- [x] Kunci warna CTA dari token warna brand
+- [x] Tampilkan spinner/loading state saat tombol memproses aksi
+- [x] Beri warna berbeda (merah/oranye) untuk tombol aksi destruktif
+- [x] Ikuti konvensi platform untuk urutan tombol (Cancel-Confirm)
+- [x] Sederhanakan gaya tombol, hindari shadow/gradient berlebihan
+- [x] Skalakan ukuran tombol sesuai tingkat kepentingan aksi
+- [x] Tambahkan aria-label untuk tombol icon-only
+- [x] Rancang hover/active state yang terasa responsif dan halus
+- [x] Kunci ukuran tombol agar tidak bergeser antar state
+- [x] Tulis CTA yang menyebut hasil konkret, bukan kata generik
+- [x] Beri jarak minimal 8-16px antar tombol berdekatan
+- [x] Tempatkan CTA penting tetap terlihat tanpa scroll berlebihan
+
+## 11. Form & Input
+- [x] Tampilkan label permanen di atas/samping field, bukan hanya placeholder
+- [x] Tandai field wajib dengan simbol/warna yang jelas dan konsisten
+- [x] Tulis pesan error yang spesifik dan actionable
+- [x] Validasi input secara real-time saat pengguna mengetik/keluar field
+- [x] Urutkan field mengikuti alur mental pengguna (nama-kontak-alamat, dst)
+- [x] Set tinggi input minimal 44px agar mudah disentuh
+- [x] Aktifkan autocomplete/autofill untuk field standar (nama, email, dst)
+- [x] Pecah form panjang jadi beberapa step dengan progress jelas
+- [x] Sertakan label eksplisit meski placeholder juga ada
+- [x] Set attribute keyboard type sesuai konten (numeric, email, dst)
+- [x] Beri gaya visual jelas beda antara field disabled dan aktif
+- [x] Letakkan pesan sukses/error tepat di dekat field terkait
+- [x] Pangkas field yang tidak esensial dari form
+- [x] Nonaktifkan tombol submit dengan indikasi jelas syarat yang belum terpenuhi
+- [x] Gunakan dropdown hanya saat opsi lebih dari ~5 pilihan
+- [x] Susun tab order form mengikuti urutan visual logis
+- [x] Tampilkan progress bar/step indicator untuk form multi-step
+- [x] Pertahankan data terisi saat terjadi error validasi
+
+## 12. Navigasi
+- [x] Susun arsitektur informasi dari riset/card sorting, bukan asumsi
+- [x] Batasi menu utama ke 5-7 item paling penting
+- [x] Tandai halaman aktif dengan visual state yang jelas
+- [x] Kunci posisi navigasi konsisten di semua halaman
+- [x] Sertakan breadcrumb untuk struktur konten berlapis
+- [x] Tulis label navigasi dengan kata yang familiar bagi pengguna
+- [x] Desain hamburger menu dengan ikon dan label yang jelas
+- [x] Sediakan fitur search jika koleksi konten/produk besar
+- [x] Naikkan fitur penting ke level navigasi utama, bukan tersembunyi
+- [x] Sederhanakan mega menu agar tidak overload informasi
+- [x] Jadikan logo selalu linkable ke halaman utama
+- [x] Beri feedback visual jelas saat hover/klik item navigasi
+- [x] Urutkan menu berdasarkan riset kebutuhan pengguna
+- [x] Bedakan gaya visual navigasi primer dan sekunder
+- [x] Batasi tinggi sticky navigation agar tidak memakan ruang berlebih
+- [x] Sediakan keyboard shortcut untuk aksi yang sering dipakai power user
+- [x] Kurasi link footer agar tetap relevan dan berguna
+- [x] Uji navigasi dengan pengguna yang belum pernah pakai produk
+
+## 13. Kartu (Cards) & Blok Konten
+- [x] Kunci ukuran card seragam dalam satu grid
+- [x] Susun urutan info dalam card: visual-judul-deskripsi-aksi
+- [x] Batasi jumlah info per card agar mudah dipindai
+- [x] Perjelas seluruh area klik card lewat hover state
+- [x] Tambahkan efek hover halus yang menandakan card bisa diklik
+- [x] Kunci rasio gambar card (misal 4:3 atau 16:9) di seluruh grid
+- [x] Siapkan fallback visual bermerek untuk card tanpa gambar
+- [x] Standarkan shadow/border card dari token desain
+- [x] Terapkan text-truncate + ellipsis untuk judul/deskripsi panjang
+- [x] Kunci satu gaya card konsisten per grid/list
+- [x] Uji card dengan panjang teks nyata dari data produksi
+- [x] Kurangi jumlah kolom card secara responsif di layar kecil
+- [x] Batasi ikon aksi dalam card maksimal 2-3 agar tidak ramai
+- [x] Kunci gutter grid card dari token spacing
+- [x] Beri indikator visual jelas (kursor, hover) untuk card interaktif
+- [x] Urutkan card dengan logika jelas (terbaru/populer/relevan)
+- [x] Tampilkan skeleton card saat data sedang dimuat
+- [x] Bedakan card unggulan secara visual namun tetap proporsional
+
+## 14. Ikon
+- [x] Kunci satu gaya ikon (outline atau filled) di seluruh produk
+- [x] Standarkan ukuran ikon dari grid ikon (misal 16/20/24px)
+- [x] Sertakan label teks untuk ikon dengan makna ambigu
+- [x] Buat ikon custom dengan stroke width konsisten
+- [x] Gunakan ikon hanya saat mendukung fungsi/makna, bukan hiasan
+- [x] Besarkan area klik ikon interaktif minimal 32-44px
+- [x] Tambahkan tooltip/aria-label pada ikon fungsional
+- [x] Ambil seluruh set ikon dari satu library/sistem yang sama
+- [x] Kunci warna ikon dari token warna sistem
+- [x] Sederhanakan detail ikon agar tetap jelas di ukuran kecil
+- [x] Bedakan bentuk ikon status (bukan hanya warna) untuk aksesibilitas
+- [x] Sejajarkan ikon dengan teks lewat optical alignment
+- [x] Pilih ikon berdasarkan relevansi makna, bukan sekadar tampilan menarik
+- [x] Konsistenkan sudut membulat/tajam di seluruh set ikon
+- [x] Kurasi/kustomisasi ikon brand agar unik, bukan hasil generate mentah
+- [x] Uji kontras ikon tetap jelas di dark mode
+- [x] Buat animasi ikon halus dan tidak mengalihkan fokus berlebihan
+- [x] Uji keterbacaan ikon di ukuran terkecil sebelum dipakai
+
+## 15. Fotografi & Ilustrasi
+- [x] Kurasi gambar yang relevan dengan konteks nyata produk/brand
+- [x] Kunci gaya ilustrasi (warna, bentuk, proporsi) dalam satu panduan
+- [x] Sediakan aset gambar resolusi tinggi (2x/3x) untuk layar retina
+- [x] Kunci rasio aspek gambar seragam dalam satu grid
+- [x] Kompres dan optimasi ukuran file gambar sebelum dipakai
+- [x] Pilih foto yang terasa autentik, hindari pose stok klise berlebihan
+- [x] Investasikan ilustrasi custom untuk memperkuat identitas brand
+- [x] Tulis alt text deskriptif untuk semua gambar bermakna
+- [x] Crop gambar dengan menjaga subjek utama tetap utuh
+- [x] Hindari menaruh teks penting di dalam file gambar
+- [x] Kurasi ilustrasi agar proporsional dan konsisten gayanya (hindari kesan acak/AI-generated)
+- [x] Selaraskan gaya visual foto/ilustrasi dengan tone brand
+- [x] Ganti semua placeholder dengan gambar asli sebelum rilis
+- [x] Beri overlay/gradasi agar teks di atas gambar tetap terbaca
+- [x] Hindari watermark stok foto pada aset final
+- [x] Kurasi representasi visual yang mencerminkan keberagaman audiens
+- [x] Konversi gambar ke format modern (WebP/AVIF) untuk efisiensi
+- [x] Terapkan lazy loading untuk gambar di luar viewport awal
+
+## 16. Animasi & Motion
+- [x] Gunakan animasi hanya untuk feedback atau transisi konteks yang jelas
+- [x] Kunci durasi animasi UI dasar di rentang 150-400ms
+- [x] Pilih easing curve natural (ease-out/ease-in-out), hindari linear
+- [x] Percepat/pangkas animasi yang menghambat penyelesaian tugas
+- [x] Sediakan pengaturan "reduce motion" untuk aksesibilitas
+- [x] Bedakan gaya animasi loading dari animasi transisi navigasi
+- [x] Standarkan gaya dan timing animasi lewat token motion
+- [x] Gunakan transisi fade/slide halus untuk elemen muncul-hilang
+- [x] Batasi efek parallax agar tidak mengganggu keterbacaan
+- [x] Kurangi intensitas animasi hover agar tetap halus, tidak berlebihan
+- [x] Percepat page transition agar tidak menghambat perceived speed
+- [x] Pertimbangkan motion sebagai fungsi, bukan sekadar gimmick "canggih"
+- [x] Sesuaikan kecepatan loop animasi loading agar nyaman dilihat
+- [x] Rancang micro-animasi yang memberi feedback jelas atas aksi
+- [x] Sesuaikan gaya animasi dengan konvensi native platform (iOS/Android)
+- [x] Uji timing animasi langsung di perangkat nyata
+- [x] Optimasi file animasi kompleks (Lottie) agar ringan
+- [x] Gunakan staggered animation secukupnya untuk memandu perhatian
+
+## 17. Micro-interaction
+- [x] Beri feedback visual instan untuk setiap aksi pengguna
+- [x] Rancang transisi jelas untuk toggle/switch antar state
+- [x] Tambahkan indikator visual jelas untuk drag & drop
+- [x] Rancang hover state yang menandakan elemen bisa diklik
+- [x] Beri micro-feedback ringkas namun memuaskan untuk aksi like/save
+- [x] Sederhanakan interaksi agar aksi umum cukup 1-2 klik
+- [x] Rancang gesture mobile (swipe, pull-to-refresh) yang responsif
+- [x] Jaga micro-interaction tetap ringkas, tidak mengalihkan fokus tugas utama
+- [x] Beri feedback instan untuk aksi copy-to-clipboard/quick action
+- [x] Tampilkan validasi kecil langsung saat input salah format
+- [x] Ubah cursor sesuai konteks interaksi di desktop
+- [x] Jaga sound/haptic feedback tetap proporsional dan bisa dimatikan
+- [x] Sediakan opsi undo untuk aksi yang rawan salah
+- [x] Gunakan skeleton/shimmer saat memuat data, bukan spinner terus-menerus
+- [x] Rancang interaksi non-hover yang setara untuk perangkat sentuh
+- [x] Bedakan feedback sukses dan error secara visual dan verbal
+- [x] Buat transisi antar state micro-interaction mulus, tidak patah
+- [x] Uji detail micro-interaction langsung dengan pengguna nyata
+
