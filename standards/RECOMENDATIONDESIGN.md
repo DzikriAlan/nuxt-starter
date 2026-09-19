@@ -342,3 +342,143 @@ Ini adalah pasangan dari `design.md`. Jika `design.md` berisi *checklist judgeme
 - [x] Buat transisi antar state micro-interaction mulus, tidak patah
 - [x] Uji detail micro-interaction langsung dengan pengguna nyata
 
+## 18. Aksesibilitas (a11y)
+- [x] Pastikan semua elemen interaktif bisa dinavigasi lewat keyboard
+- [x] Tampilkan focus indicator yang jelas dan kontras saat navigasi keyboard
+- [x] Penuhi standar kontras WCAG AA sebagai baseline
+- [x] Tulis alt text deskriptif untuk semua gambar bermakna
+- [x] Susun struktur heading logis tanpa loncat level
+- [x] Hubungkan label form ke field secara programatik (for/id atau aria)
+- [x] Sertakan penanda non-warna (ikon/teks) untuk info penting
+- [x] Pastikan layout tetap utuh saat teks di-zoom hingga 200%
+- [x] Gunakan ARIA role sesuai konteks yang benar, secukupnya
+- [x] Sediakan caption/transkrip untuk konten video/audio
+- [x] Hindari animasi flashing yang berisiko photosensitive seizure
+- [x] Uji alur utama produk langsung dengan screen reader
+- [x] Perbesar target sentuh untuk pengguna dengan keterbatasan motorik
+- [x] Deklarasikan atribut bahasa (lang) pada dokumen/halaman
+- [x] Sediakan skip-to-content link untuk halaman dengan navigasi panjang
+- [x] Sampaikan error form secara tekstual, bukan hanya warna
+- [x] Uji tampilan di mode high-contrast/grayscale untuk validasi non-warna
+- [x] Kelola focus trap dengan benar pada modal/dialog
+
+## 19. Responsif & Adaptif
+- [x] Uji layout di breakpoint utama: mobile, tablet, desktop, large screen
+- [x] Prioritaskan ulang konten (bukan hanya ditumpuk) di layar kecil
+- [x] Skalakan font dan spacing secara proporsional antar breakpoint
+- [x] Pakai gambar responsif (srcset/object-fit) agar tidak terdistorsi
+- [x] Sesuaikan bentuk navigasi secara wajar untuk mobile
+- [x] Gunakan horizontal scroll hanya secara sengaja dan terbatas
+- [x] Pertimbangkan orientasi portrait/landscape untuk konten mobile
+- [x] Perbesar otomatis touch target di perangkat sentuh
+- [x] Cek dan perbaiki semua potensi overflow di layar kecil
+- [x] Uji desain langsung di perangkat fisik, bukan hanya simulator
+- [x] Sederhanakan/sembunyikan konten kurang relevan di mobile
+- [x] Sesuaikan ulang layout desktop, jangan sekadar melebarkan versi mobile
+- [x] Gunakan container fluid untuk layar sangat lebar
+- [x] Rancang modal fullscreen di mobile bila diperlukan
+- [x] Uji kenyamanan baca font-size/line-height di semua ukuran
+- [x] Pastikan elemen fixed/sticky tidak menutup konten penting di layar kecil
+- [x] Kurangi jumlah kolom grid secara logis sesuai lebar layar
+- [x] Optimasi loading khusus untuk koneksi mobile lambat
+
+## 20. Mobile-specific
+- [x] Set ukuran tombol minimal 44x44pt sesuai guideline platform
+- [x] Tempatkan aksi utama di thumb zone yang mudah dijangkau
+- [x] Gunakan bottom navigation untuk fitur yang sering diakses
+- [x] Dukung gesture umum (swipe back, pull to refresh) secara konsisten
+- [x] Geser viewport otomatis agar keyboard tidak menutupi field aktif
+- [x] Hormati safe area (notch, home indicator) dalam layout
+- [x] Set font minimal 16px pada input untuk mencegah auto-zoom iOS
+- [x] Tempatkan konten kritikal jauh dari ujung ekstrem layar
+- [x] Tangani rotasi layar dengan baik jika didukung
+- [x] Rancang notifikasi push yang relevan dan tidak berlebihan
+- [x] Optimasi ukuran aset agar ringan di perangkat low-end
+- [x] Sediakan fallback UI jelas untuk mode offline/koneksi lambat
+- [x] Selaraskan ikon aplikasi dan splash screen dengan identitas brand
+- [x] Rancang interaksi nyaman untuk penggunaan satu tangan
+- [x] Gunakan haptic feedback secukupnya untuk aksi penting
+- [x] Ikuti konvensi platform (back button dst) sesuai iOS/Android
+- [x] Dukung dynamic type/pengaturan ukuran teks sistem
+- [x] Optimasi scroll agar tetap 60fps di perangkat menengah
+
+## 21. Konten & Copywriting
+- [x] Tulis copy singkat, jelas, dan langsung ke poin
+- [x] Kunci tone of voice konsisten lewat panduan brand voice
+- [x] Jelaskan istilah teknis atau ganti dengan bahasa awam
+- [x] Tulis label tombol yang actionable dan spesifik
+- [x] Proofread seluruh konten sebelum rilis final
+- [x] Ganti jargon pemasaran dengan klaim konkret berbukti
+- [x] Tulis pesan error dengan nada empatik dan solutif
+- [x] Prioritaskan konten berdasarkan riset kebutuhan pengguna
+- [x] Tulis heading yang informatif sekaligus menarik
+- [x] Standarkan istilah yang sama untuk konsep yang sama di seluruh produk
+- [x] Pecah kalimat panjang agar mudah dipindai
+- [x] Jelaskan hasil konkret di tiap CTA
+- [x] Sesuaikan konten legal/privasi dengan bahasa yang jelas dan manusiawi
+- [x] Sesuaikan nada bahasa dengan konteks dan segmen audiens
+- [x] Tulis microcopy (tooltip, helper text) yang ringkas dan membantu
+- [x] Edit ulang konten hasil draf otomatis dengan sentuhan editorial manusia
+- [x] Verifikasi akurasi semua angka dan data dalam copy
+- [x] Baca ulang copy dengan suara lantang untuk cek ritme kalimat
+
+## 22. Empty State, Error, Loading State
+- [x] Rancang ilustrasi dan pesan khusus untuk tiap empty state
+- [x] Sertakan CTA jelas di setiap empty state
+- [x] Jelaskan penyebab error dan langkah perbaikannya
+- [x] Bangun skeleton loading yang menyerupai bentuk konten asli
+- [x] Tampilkan progress indikator untuk proses loading yang lama
+- [x] Rancang halaman 404/500 khusus sesuai identitas brand
+- [x] Tulis pesan error dengan bahasa yang jelas, tidak menyalahkan pengguna
+- [x] Bedakan empty state pertama kali dari empty state hasil filter/pencarian
+- [x] Sarankan alternatif/koreksi saat hasil pencarian kosong
+- [x] Sediakan tombol retry yang jelas saat koneksi/timeout gagal
+- [x] Lewati spinner untuk loading super singkat (<300ms)
+- [x] Tampilkan konfirmasi sebelum aksi destruktif yang berisiko kehilangan data
+- [x] Buat transisi halus antar state (loading-sukses-error)
+- [x] Rancang seluruh kemungkinan state, bukan hanya happy path
+- [x] Standarkan gaya visual loading state di seluruh produk
+- [x] Sertakan jalur bantuan di error state kritikal
+- [x] Jelaskan alasan jelas pada empty state akibat permission/akses
+- [x] Sederhanakan pesan state agar tidak menambah kebingungan saat error
+
+## 23. Notifikasi & Feedback
+- [x] Standarkan posisi dan durasi tampil notifikasi sukses/error
+- [x] Posisikan toast/snackbar agar tidak menghalangi elemen penting
+- [x] Perpanjang durasi tampil untuk notifikasi kritikal
+- [x] Bedakan warna dan ikon untuk info/sukses/warning/error
+- [x] Batasi frekuensi notifikasi agar tidak mengganggu (hindari fatigue)
+- [x] Personalisasi notifikasi push sesuai konteks pengguna
+- [x] Sinkronkan badge notifikasi dengan jumlah item belum dibaca yang akurat
+- [x] Sediakan tombol dismiss yang mudah dijangkau
+- [x] Berikan feedback sistem untuk setiap aksi penting
+- [x] Hindari duplikasi notifikasi in-app dan push untuk kejadian sama
+- [x] Tulis pesan konfirmasi aksi destruktif secara jelas dan tegas
+- [x] Sediakan opsi mematikan sound notifikasi
+- [x] Sembunyikan info sensitif dari notifikasi di lock screen
+- [x] Sediakan riwayat notifikasi yang bisa direview ulang
+- [x] Beri pengguna kontrol atas frekuensi notifikasi (preferences)
+- [x] Terjemahkan error backend ke bahasa yang dipahami pengguna awam
+- [x] Tampilkan progress jelas untuk proses panjang (upload, dst)
+- [x] Tampilkan konfirmasi visual singkat setelah aksi berhasil
+
+## 24. Data Visualisasi / Chart
+- [x] Pilih jenis chart sesuai jenis data (bar/line/pie sesuai konteks)
+- [x] Mulai skala sumbu dari nol kecuali ada alasan kuat dan dijelaskan
+- [x] Sertakan legenda yang konsisten dengan warna data
+- [x] Beri label sumbu dan satuan yang jelas
+- [x] Highlight data terpenting, redupkan data pendukung
+- [x] Tampilkan tooltip detail saat hover pada titik data
+- [x] Uji chart tetap terbaca dalam grayscale
+- [x] Batasi jumlah kategori per chart agar tetap terbaca
+- [x] Rancang state kosong yang jelas untuk chart tanpa data
+- [x] Redupkan gridline agar hanya jadi bantuan visual, bukan dominan
+- [x] Buat chart responsif menyesuaikan ukuran layar
+- [x] Tambahkan anotasi untuk menjelaskan anomali data penting
+- [x] Hindari chart 3D kecuali benar-benar diperlukan
+- [x] Urutkan data secara logis (kronologis/besar-kecil)
+- [x] Rancang interaksi filter/zoom yang intuitif
+- [x] Pilih palet warna chart yang ramah buta warna
+- [x] Cantumkan sumber data untuk kredibilitas
+- [x] Batasi jumlah chart per dashboard agar tidak overload
+
