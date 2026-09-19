@@ -482,3 +482,163 @@ Ini adalah pasangan dari `design.md`. Jika `design.md` berisi *checklist judgeme
 - [x] Cantumkan sumber data untuk kredibilitas
 - [x] Batasi jumlah chart per dashboard agar tidak overload
 
+## 25. Dark Mode & Theming
+- [x] Rancang palet dark mode dari nol, bukan hasil invert otomatis
+- [x] Gunakan abu-abu gelap (bukan hitam pekat) sebagai background utama
+- [x] Pertahankan identitas warna brand tetap dikenali di kedua mode
+- [x] Ganti shadow dengan elevation/border di dark mode
+- [x] Sediakan varian gambar/ilustrasi untuk dark mode
+- [x] Hindari pure black (#000) untuk area background luas
+- [x] Uji ikon dan grafik tetap kontras di kedua tema
+- [x] Simpan dan hormati preferensi tema pengguna (sistem/manual)
+- [x] Buat transisi antar tema halus tanpa flicker
+- [x] Uji ulang semua state komponen di dark mode
+- [x] Uji elemen custom/ilustratif agar tidak pecah di kedua tema
+- [x] Pertahankan kejelasan warna semantik (error/sukses) di dark mode
+- [x] Uji ulang kontras warna secara manual, bukan hanya asumsi otomatis
+- [x] Jaga keterbacaan minimal pada tema custom yang didukung
+- [x] Tempatkan toggle tema di lokasi yang mudah ditemukan
+- [x] Uji dark mode di layar OLED dan LCD
+- [x] Uji ulang kontras elemen dengan opacity/transparency
+- [x] Bangun token warna yang mendukung kedua tema tanpa duplikasi kode
+
+## 26. Branding & Identitas Visual
+- [x] Ikuti brand guideline untuk ukuran, clear space, dan warna logo
+- [x] Terapkan warna, font, dan gaya visual konsisten di semua materi
+- [x] Selaraskan elemen visual dengan nilai dan kepribadian brand
+- [x] Jaga proporsi logo, jangan pernah diregangkan/diputar sembarangan
+- [x] Siapkan varian logo (monokrom, ikon saja) untuk berbagai konteks
+- [x] Sesuaikan tone visual dengan positioning brand
+- [x] Jaga konsistensi brand lintas platform (web, app, media sosial)
+- [x] Kembangkan elemen visual khas (pattern/ikon) sebagai diferensiasi
+- [x] Dokumentasikan brand guideline dan sebarkan ke seluruh tim
+- [x] Bangun diferensiasi visual yang jelas dari kompetitor
+- [x] Jaga konsistensi warna brand di produk fisik dan digital
+- [x] Daftarkan lisensi font brand untuk semua platform yang dipakai
+- [x] Selaraskan brand voice dalam visual dan copy
+- [x] Simpan aset brand dalam format vektor untuk skalabilitas
+- [x] Jaga sub-brand tetap terasa satu keluarga visual dengan induknya
+- [x] Pertimbangkan ekuitas brand lama saat melakukan rebranding
+- [x] Uji elemen visual brand di berbagai ukuran (favicon-billboard)
+- [x] Kembangkan signature detail unik yang membedakan brand
+
+## 27. Konsistensi & Design System
+- [x] Dokumentasikan token desain (warna, spacing, tipografi) secara terpusat
+- [x] Sinkronkan komponen design system dengan kode implementasi aktual
+- [x] Komunikasikan setiap perubahan design system ke seluruh tim
+- [x] Audit dan hilangkan duplikasi komponen dengan fungsi sama
+- [x] Standarkan naming convention komponen dan token
+- [x] Sertakan panduan do's and don'ts di dokumentasi design system
+- [x] Kelola versi design system agar perubahan tidak breaking tanpa notifikasi
+- [x] Jaga konsistensi antara desain di tool desain dan hasil akhir produk
+- [x] Sertakan pattern umum (form, list, empty state) di pattern library
+- [x] Jadwalkan audit desain berkala untuk temukan inkonsistensi
+- [x] Bangun dukungan theming/multi-brand jika dibutuhkan
+- [x] Terapkan proses review untuk setiap kontribusi ke design system
+- [x] Bangun aksesibilitas sejak level komponen design system
+- [x] Sertakan contoh penggunaan nyata, bukan hanya komponen terisolasi
+- [x] Bersihkan komponen legacy yang sudah tidak terpakai secara berkala
+- [x] Definisikan skala responsif komponen dalam sistem
+- [x] Uji dampak perubahan visual besar sebelum rilis ke seluruh produk
+- [x] Satukan sumber kebenaran (source of truth) desain dan developer
+
+## 28. Onboarding & First-run Experience
+- [x] Jelaskan value produk secara singkat di awal onboarding
+- [x] Sediakan opsi skip onboarding bagi pengguna yang ingin eksplorasi
+- [x] Minimalkan langkah dan input yang diminta di awal
+- [x] Tampilkan progress jelas untuk onboarding multi-langkah
+- [x] Gunakan tooltip kontekstual untuk fitur kompleks
+- [x] Sesuaikan onboarding untuk pengguna baru vs pengguna kembali
+- [x] Sampaikan ekspektasi jelas tentang apa yang bisa dilakukan produk
+- [x] Beri akses cepat ke fitur inti tanpa terhalang onboarding panjang
+- [x] Rancang momen "quick win" di awal pengalaman
+- [x] Minta izin (notifikasi/lokasi) dengan konteks yang jelas
+- [x] Arahkan empty state pertama kali untuk mendorong aksi awal
+- [x] Uji onboarding langsung dengan pengguna baru sungguhan
+- [x] Tulis bahasa onboarding yang ramah dan tidak teknis berlebihan
+- [x] Sediakan akses ulang onboarding dari menu pengaturan
+- [x] Bangun checklist onboarding untuk rasa progres dan pencapaian
+- [x] Hilangkan pengulangan informasi yang sudah jelas dari konteks
+- [x] Sesuaikan durasi onboarding dengan realita waktu pengguna
+- [x] Sesuaikan alur onboarding dengan perilaku device (mobile/desktop)
+
+## 29. Performa & Perceived Performance
+- [x] Targetkan waktu muat halaman di bawah 2-3 detik
+- [x] Gunakan skeleton screen untuk mempercepat persepsi loading
+- [x] Kompres aset gambar tanpa mengorbankan kualitas signifikan
+- [x] Optimasi pemuatan font (font-display: swap, subsetting)
+- [x] Uji animasi tetap lancar di perangkat low-end
+- [x] Prioritaskan pemuatan konten above the fold
+- [x] Terapkan lazy loading untuk konten di luar viewport awal
+- [x] Optimasi ukuran bundle kode agar loading lebih cepat
+- [x] Terapkan optimistic UI untuk transisi yang terasa instan
+- [x] Manfaatkan cache untuk konten yang jarang berubah
+- [x] Jaga interaksi utama tetap responsif saat data dimuat di background
+- [x] Atur prioritas resource (CSS/JS kritikal dulu)
+- [x] Uji perceived performance di kondisi jaringan lambat (throttled)
+- [x] Tunda pemuatan elemen non-kritikal tanpa mengganggu interaksi awal
+- [x] Beri feedback instan meski proses backend masih berjalan
+- [x] Sediakan video dalam format dan ukuran yang dioptimasi
+- [x] Pantau metrik performa secara berkala pasca-rilis
+- [x] Timbang sadar trade-off antara visual kaya dan kecepatan
+
+## 30. Shadow, Depth & Elevasi
+- [x] Bangun sistem elevasi berjenjang (level 1-5) dari token
+- [x] Gunakan shadow untuk menandai hierarki/interaktivitas, bukan hiasan
+- [x] Kunci arah sumber cahaya shadow konsisten di seluruh produk
+- [x] Ringankan intensitas shadow agar tidak terlihat berat/kotor
+- [x] Beri shadow jelas pada elemen elevated (modal, dropdown, popover)
+- [x] Kurangi intensitas shadow di dark mode
+- [x] Sesuaikan blur radius shadow dengan ukuran elemen
+- [x] Batasi pemakaian shadow hanya untuk elemen yang butuh penekanan
+- [x] Terapkan elevasi konsisten untuk urutan layer (z-index terstruktur)
+- [x] Beri konteks jelas agar elemen berbayang tidak terlihat mengambang
+- [x] Gunakan neumorphism secara sangat selektif dan uji aksesibilitasnya
+- [x] Gunakan text-shadow secukupnya, hanya untuk keterbacaan
+- [x] Samakan level elevasi antar komponen sejenis
+- [x] Ganti shadow dengan border saat performa jadi prioritas
+- [x] Batasi efek depth agar tidak mengganggu fokus konten utama
+- [x] Uji shadow di berbagai kondisi background sebelum final
+- [x] Dokumentasikan sistem elevasi lewat token, bukan nilai custom
+- [x] Perbaiki masalah kontras di akarnya, jangan andalkan shadow untuk menutupinya
+
+## 31. Border, Radius & Bentuk
+- [x] Tetapkan skala radius konsisten (4/8/12/16px)
+- [x] Pilih karakter sudut (tajam/membulat) yang mencerminkan brand
+- [x] Ringankan ketebalan border agar tidak terasa berat
+- [x] Pilih warna border dengan kontras cukup tanpa mendominasi
+- [x] Gunakan border hanya saat perlu memisahkan konten secara fungsional
+- [x] Samakan radius antar komponen sejenis (card, button, input)
+- [x] Konsistenkan bentuk organik/custom sebagai bagian gaya visual
+- [x] Jaga konsistensi sudut tajam/membulat dalam satu grup elemen
+- [x] Gunakan border untuk memisahkan konten secara logis
+- [x] Sesuaikan besar radius elemen besar dengan ukurannya secara proporsional
+- [x] Terapkan border style (solid/dashed) sesuai maknanya secara konsisten
+- [x] Uji elemen radius berbeda tidak bertabrakan visual saat bersebelahan
+- [x] Selaraskan shape language antara ikon, ilustrasi, dan komponen
+- [x] Gunakan border sebagai pemisah, bukan pengganti spacing yang seharusnya
+- [x] Kurangi sedikit radius di mobile bila diperlukan untuk kepadatan layar
+- [x] Uji bentuk custom tetap jelas fungsinya, tidak sekadar estetika
+- [x] Perjelas border input form sebagai penanda area yang bisa diisi
+- [x] Pertahankan konsistensi radius di dark dan light mode
+
+## 32. Gradient & Tekstur
+- [x] Gunakan gradient dengan tujuan jelas (kedalaman/penekanan)
+- [x] Racik warna gradient tetap dalam palet brand
+- [x] Batasi gradient hanya pada 1-2 elemen kunci per halaman
+- [x] Jaga kontras teks tetap terjaga di atas gradient
+- [x] Buat tekstur (noise/grain) halus dan tidak mengganggu keterbacaan
+- [x] Kustomisasi gradient agar unik, hindari kesan "template SaaS generik"
+- [x] Halusakan transisi warna gradient agar tidak banding
+- [x] Jadikan tekstur elemen brand yang konsisten dipakai, bukan sekali pakai
+- [x] Uji gradient tetap terlihat baik di berbagai ukuran layar
+- [x] Pertimbangkan kontras dan performa saat memakai glassmorphism
+- [x] Jaga keterbacaan konten di atas tekstur background
+- [x] Batasi gradient sebagai aksen, bukan mendominasi seluruh halaman
+- [x] Seimbangkan kombinasi gradient dan shadow agar tidak berlebihan
+- [x] Optimasi ukuran file tekstur agar ringan
+- [x] Konsistenkan arah dan sudut gradient antar elemen sejenis
+- [x] Gunakan efek berat (blur/glow) secara hemat dan bertujuan
+- [x] Uji persepsi gradient tetap sesuai di dark mode
+- [x] Perkuat konsep desain dasar tanpa bergantung pada tekstur/gradient
+
