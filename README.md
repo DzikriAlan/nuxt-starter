@@ -103,12 +103,12 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 src/
 ├── assets/                   # Static assets (images, fonts, icons)
 ├── features/
-│   └── {featureName}/
-│       ├── types/            # TypeScript interfaces & types
-│       ├── states/           # Composable state management
-│       ├── services/         # API calls & business logic
-│       ├── controllers/      # Async handlers & logic
-│       └── components/       # Vue components
+│   └── {folderName}/         # kebab-case, derived from endpoint (see standards/FECODE.md)
+│       ├── types/            # {fileName}Types.ts — TypeScript interfaces & types
+│       ├── states/           # {fileName}States.ts — Pinia state (reactive)
+│       ├── services/         # {fileName}Services.ts — pure API calls
+│       ├── controllers/      # {fileName}Controllers.ts — Pinia store calling services
+│       └── components/       # {fileName}{Action}.vue — Vue components
 ├── shared/
 │   ├── components/
 │   │   ├── base/            # Base UI components
@@ -120,6 +120,13 @@ src/
 │   └── utils/               # Helper functions
 ├── styles/                  # Global SCSS styles
 └── middleware/              # Nuxt middleware
+
+server/
+├── api/
+│   ├── features/{folder-name}/  # dto, entities, repositories, services, controllers, module.ts
+│   └── v1/{folder-name}/       # Thin route files → controller (see standards/BECODE.md)
+├── middleware/              # Server middleware (JWT auth)
+└── utils/                   # Prisma singleton, response helpers, error mapping
 ```
 
 ---
@@ -132,24 +139,80 @@ src/
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build locally |
 | `npm run lint` | Run ESLint |
-| `npm run type-check` | Run TypeScript type checking |
 | `npm run db:push` | Push Prisma schema to database |
 | `npm run db:generate` | Generate Prisma client |
 | `npm run db:studio` | Open Prisma Studio (database GUI) |
 
 ---
 
+## 🧭 Next Steps: Building on This Starter
+
+After the Quick Start, every new feature must follow the documents in the [standards/](./standards) folder. Read them before writing code.
+
+| Step | What to do | Standard |
+|------|-----------|----------|
+| 1 | Define the endpoint and derive names from the URL (drop base URL, `api`, `v{n}`, and dynamic segments) → `folderName`, `fileName`, `resourceName` | [FECODE.md](./standards/FECODE.md#penamaan-folder--file) |
+| 2 | Design the API response contract (`success`, `data`, `error`, `pagination`, `message`) and HTTP status codes | [RESPONSE.md](./standards/RESPONSE.md) |
+| 3 | Build the backend feature in `server/api/features/{folder-name}/`: DTO → Entity → Repository → Service → Controller → `module.ts`, then add thin route files in `server/api/v1/{folder-name}/` | [BECODE.md](./standards/BECODE.md) |
+| 4 | Build the frontend feature in `src/features/{folderName}/`: Types → States → Services → Controllers → Components | [FECODE.md](./standards/FECODE.md) |
+| 5 | Verify: `npx vue-tsc --noEmit` passes and no function name uses a prefix outside the convention | [FECODE.md](./standards/FECODE.md#final-rules), [BECODE.md](./standards/BECODE.md#final-rules) |
+
+### Frontend flow (FECODE)
+
+```txt
+src/features/{folderName}/
+├── types/{fileName}Types.ts
+├── states/{fileName}States.ts
+├── services/{fileName}Services.ts
+├── controllers/{fileName}Controllers.ts
+└── components/{fileName}{Action}.vue
+```
+
+### Backend flow (BECODE)
+
+```txt
+server/api/features/{folder-name}/
+├── dto/{fileName}.dto.ts
+├── entities/{fileName}.entity.ts
+├── repositories/{fileName}.repository.ts
+├── services/{fileName}.service.ts
+├── controllers/{fileName}.controller.ts
+└── module.ts
+```
+
+### Function prefixes per layer
+
+| Layer | Prefixes |
+|-------|----------|
+| FE Service | `get` `post` `update` `patch` `delete` |
+| FE Controller | `fetch` `store` `modify` `remove` |
+| FE Component / emit / onMessage | `load` `submit` `edit` `clear` |
+| BE Repository | `get` `post` `update` `patch` `delete` |
+| BE Service | `fetch` `store` `change` `remove` |
+| BE Controller | `load` `save` `modify` `destroy` |
+
+> Do not introduce prefixes outside these lists (e.g. `create`, `find`, `handle`, `process`).
+
+---
+
 ## 🏗️ Architecture Guide
 
-Complete documentation for architecture, naming conventions, and best practices is available in [CODE.md](./CODE.md).
+Complete documentation for architecture, naming conventions, and best practices lives in the [standards/](./standards) folder:
+
+| Document | Scope |
+|----------|-------|
+| [FECODE.md](./standards/FECODE.md) | Frontend architecture, naming, Types/States/Services/Controllers/Components rules |
+| [BECODE.md](./standards/BECODE.md) | Backend (Nitro) architecture, layer boundaries, naming, error handling |
+| [RESPONSE.md](./standards/RESPONSE.md) | Standard API response and HTTP status codes |
 
 **Key Topics:**
 - Naming conventions (functions, files, folders)
-- Layer structure (Types, States, Services, Controllers, Components)
+- Layer structure (FE: Types, States, Services, Controllers, Components; BE: DTO, Entity, Repository, Service, Controller, Module)
 - Vue component best practices
 - API integration patterns
-- State management with VueUse
+- State management with Pinia
 - Prisma ORM usage
+- Standard API response format
 
 ---
 
